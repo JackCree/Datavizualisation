@@ -19,18 +19,18 @@ var svgContainer = d3.select('.visHolder')
 					 .attr('width', width + 100)
 					 .attr('height', height + 60);
 
-let dataset;
+/*let dataset;
 let req = new XMLHttpRequest();
 req.open("GET", 'https://raw.githubusercontent.com/JackCree/Datavizualisation/main/GDP-data.json', true);
 req.onreadystatechange = ()=>{
   if(req.readyState == 4 && req.status == 200)
     dataset = JSON.parse(req.responseText);
 }
-req.send();
+req.send();*/
 
 //Json Request
 d3.json(
-	dataset,
+	'https://raw.githubusercontent.com/JackCree/Datavizualisation/main/GDP-data.json'
 	function(e, data) {
 		svgContainer.append('text')
 			      	.attr('transform', 'rotate(-90)')
