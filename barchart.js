@@ -21,7 +21,7 @@ var svgContainer = d3.select('.visHolder')
 
 let dataset;
 let req = new XMLHttpRequest();
-req.open("GET", 'https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json', true);
+req.open("GET", 'https://raw.githubusercontent.com/JackCree/Datavizualisation/main/GDP-data.json', true);
 req.onreadystatechange = ()=>{
   if(req.readyState == 4 && req.status == 200)
     dataset = JSON.parse(req.responseText);
